@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+    
+    <div id="app">
+        <div class="main-container">
+            <img :src="pictures[i]" alt="">
+            <div class="button-container">
+                <button @click="prev" class="button">prev</button>
+                <button @click="post" class="button">post</button>
+            </div>
+            <div class="pallini">
+                <span v-for="(pallini, ip) in pictures" :class="['pallino', ip === i ? 'pon' : 'pof']"></span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
